@@ -1,0 +1,19 @@
+Aisha Rahman
+aisha.rahman@example.com | Dhaka, Bangladesh
+
+EDUCATION
+BSc in Computer Science, Example University, 2022 - 2026 (expected)
+CGPA: 3.4/4.0
+
+EXPERIENCE
+Intern, Example Tech Ltd, Jun 2025 - Aug 2025
+- Worked on the company website
+- Helped the team with bug fixes
+- Attended weekly meetings
+
+PROJECTS
+Student Library App
+- Made a web app for the university library using React and Node
+
+SKILLS
+JavaScript, React, Node.js, Git, SQL
