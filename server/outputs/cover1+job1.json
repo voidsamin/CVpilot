@@ -1,0 +1,49 @@
+{
+  "summary": "Your cover letter clearly states your interest in the role and mentions your core technical tools, Python and Excel. To stand out, you need to replace generic self-descriptions with specific examples of your project work and directly address the key requirements of the job post.",
+  "strengths": [
+    "Directly states your current academic status as a final-year student, matching the job post's target audience.",
+    "Explicitly mentions Python and Excel, which are key technical requirements listed in the job description."
+  ],
+  "gaps": [
+    {
+      "topic": "SQL Queries",
+      "why": "The job post lists writing SQL queries as a key responsibility, but your cover letter does not mention any database experience or SQL skills.",
+      "jobPostEvidence": "write SQL queries"
+    },
+    {
+      "topic": "Data Visualization and Dashboards",
+      "why": "The employer is looking for someone who can build dashboards in Tableau or Power BI, which is currently missing from your letter.",
+      "jobPostEvidence": "build dashboards in Tableau or Power BI"
+    },
+    {
+      "topic": "Presenting Insights",
+      "why": "The role requires presenting insights to non-technical stakeholders, but your letter only mentions general teamwork without highlighting communication skills.",
+      "jobPostEvidence": "present insights to non-technical stakeholders"
+    }
+  ],
+  "missingKeywords": [
+    "SQL",
+    "Tableau",
+    "Power BI",
+    "dashboards",
+    "statistics",
+    "datasets"
+  ],
+  "rewrites": [
+    {
+      "original": "I am a hard worker and I am very passionate about data.",
+      "conservative": "I am a dedicated student with a strong interest in working with data.",
+      "stronger": "I am motivated to apply my dedication to working with data, as demonstrated when I [describe a specific project or situation where you worked hard with data] [add the result and its metric, if you have one]."
+    },
+    {
+      "original": "During my studies I did some projects with Python and I also used Excel.",
+      "conservative": "During my studies, I completed projects using Python and Excel.",
+      "stronger": "During my studies, I completed [N] projects using Python and Excel [add details about what you did in these projects], [add the result and its metric, if you have one]."
+    },
+    {
+      "original": "I am a fast learner and I can work in a team.",
+      "conservative": "I learn quickly and collaborate effectively within a team.",
+      "stronger": "I learn new concepts quickly and collaborate effectively within a team, as demonstrated when I worked with a team of [N] [add what the team did] [add the result and its metric, if you have one]."
+    }
+  ]
+}

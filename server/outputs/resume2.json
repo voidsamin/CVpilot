@@ -1,0 +1,39 @@
+{
+  "summary": "Your resume shows great initial marketing experience through your volunteer work and class projects. To make it more impactful, you should focus on quantifying your achievements and clearly connecting your technical skills to your experiences.",
+  "strengths": [
+    "Direct marketing experience through social media management for a campus organization.",
+    "Practical academic project work involving primary research and teamwork."
+  ],
+  "gaps": [
+    {
+      "topic": "Quantifying Social Media Impact",
+      "why": "The social media experience lists tasks like managing the page and making posts but lacks metrics. Adding the number of posts, follower growth, or engagement rates would make this section much stronger."
+    },
+    {
+      "topic": "Survey Methodology and Scope",
+      "why": "The marketing class project mentions conducting a survey but does not specify the scale. Including the number of respondents or the tools used to analyze the data would demonstrate your research capabilities."
+    },
+    {
+      "topic": "Contextualizing Skills",
+      "why": "Skills like Microsoft Excel and Canva are listed in the skills section but are not mentioned in your experience or project descriptions. Connecting these tools to your actual tasks shows how you apply them in practice."
+    }
+  ],
+  "missingKeywords": [],
+  "rewrites": [
+    {
+      "original": "Managed the club's Facebook page",
+      "conservative": "Administered the club's Facebook page",
+      "stronger": "Administered the club's Facebook page [add frequency, e.g., daily], [add the result or metric, such as follower growth or engagement rate, if you have one]"
+    },
+    {
+      "original": "Made posts for events",
+      "conservative": "Created posts for events",
+      "stronger": "Created [N] posts for events [add the tools you used, e.g., Canva], [add the result, such as event attendance or reach, if you have one]"
+    },
+    {
+      "original": "Did a survey about student spending habits with a group",
+      "conservative": "Conducted a survey on student spending habits with a group",
+      "stronger": "Conducted a survey on student spending habits with a group of [N] peers, surveying [N] students [add the tools you used to analyze data, if any] [add the outcome or presentation of the results]"
+    }
+  ]
+}

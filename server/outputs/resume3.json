@@ -1,0 +1,39 @@
+{
+  "summary": "Your resume highlights solid foundational hands-on skills through your lab assistant role and Arduino project. To make it stronger, you should add specific technical details, quantify your impact, and expand on your academic coursework.",
+  "strengths": [
+    "Includes direct, hands-on experience with hardware prototyping tools like Arduino.",
+    "Demonstrates leadership and communication skills through the Lab Assistant role."
+  ],
+  "gaps": [
+    {
+      "topic": "Quantifying Lab Assistant Scope",
+      "why": "The resume mentions being responsible for lab equipment and helping students, but does not specify the number of students assisted or the types of equipment managed."
+    },
+    {
+      "topic": "Technical Details in Projects",
+      "why": "The plant watering system project description is very brief and lacks details on the specific programming languages, components, or testing outcomes."
+    },
+    {
+      "topic": "Academic Coursework and Projects",
+      "why": "As an Electrical Engineering student, listing only one project and no relevant coursework makes it difficult to assess your academic breadth and technical depth."
+    }
+  ],
+  "missingKeywords": [],
+  "rewrites": [
+    {
+      "original": "Responsible for lab equipment",
+      "conservative": "Maintained lab equipment",
+      "stronger": "Managed [number] pieces of lab equipment [add specific types of equipment] [add the result and its metric, if you have one]"
+    },
+    {
+      "original": "Helped students during practical sessions",
+      "conservative": "Assisted students during practical sessions",
+      "stronger": "Assisted [number] students during practical sessions [add the specific tasks or concepts you helped with] [add the result and its metric, if you have one]"
+    },
+    {
+      "original": "Built a system with Arduino and a moisture sensor that waters plants",
+      "conservative": "Constructed a system using Arduino and a moisture sensor to water plants",
+      "stronger": "Constructed a plant watering system using Arduino and a moisture sensor [add any other tools or components used] [add the result and its metric, if you have one]"
+    }
+  ]
+}

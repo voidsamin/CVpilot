@@ -1,0 +1,7 @@
+Data Analyst Intern
+
+We are looking for a final-year student to join our analytics team.
+You will clean and analyze datasets, build dashboards in Tableau or
+Power BI, write SQL queries, and present insights to non-technical
+stakeholders. Strong Python and Excel skills are required. Experience
+with A/B testing and statistics is a plus.

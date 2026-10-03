@@ -1,0 +1,17 @@
+Nusrat Jahan
+nusrat.j@example.com | Sylhet, Bangladesh
+
+EDUCATION
+BSc in Electrical Engineering, Demo Institute of Technology, 2022 - 2026 (expected)
+
+EXPERIENCE
+Lab Assistant, Demo Institute Electronics Lab, Sep 2024 - Present
+- Responsible for lab equipment
+- Helped students during practical sessions
+
+PROJECTS
+Automatic Plant Watering System
+- Built a system with Arduino and a moisture sensor that waters plants
+
+SKILLS
+Arduino, C++, MATLAB, Soldering, Report Writing

@@ -1,0 +1,39 @@
+{
+  "summary": "Your resume shows a solid foundation in computer science with practical internship experience and a relevant web development project. To make your application more competitive, you should replace passive descriptions with active verbs and add specific details about your technical contributions.",
+  "strengths": [
+    "Direct industry experience gained through a technology internship during your undergraduate studies.",
+    "A clear, focused skills section that aligns well with your web development project and internship work."
+  ],
+  "gaps": [
+    {
+      "topic": "Quantifying Internship Contributions",
+      "why": "Your internship bullet points describe tasks like fixing bugs and working on the website without mentioning the scale, number of bugs resolved, or the impact of your work."
+    },
+    {
+      "topic": "Project Scope and Features",
+      "why": "The Student Library App project description is very brief and does not explain what specific features you built or how the application functioned."
+    },
+    {
+      "topic": "Active Collaboration Details",
+      "why": "Listing 'Attended weekly meetings' describes passive attendance rather than active participation, contribution, or collaboration with your team."
+    }
+  ],
+  "missingKeywords": [],
+  "rewrites": [
+    {
+      "original": "Worked on the company website",
+      "conservative": "Contributed to the company website",
+      "stronger": "Contributed to the company website by [add the specific features or pages you worked on], [add the result and its metric, if you have one]"
+    },
+    {
+      "original": "Helped the team with bug fixes",
+      "conservative": "Assisted the team with bug fixes",
+      "stronger": "Assisted the team with resolving [N] bugs in [add the specific system or codebase], [add the result and its metric, if you have one]"
+    },
+    {
+      "original": "Made a web app for the university library using React and Node",
+      "conservative": "Developed a web application for the university library using React and Node",
+      "stronger": "Developed a web application for the university library using React and Node to [add the purpose or key features of the app], [add the user metric or result, if you have one]"
+    }
+  ]
+}
