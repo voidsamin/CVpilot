@@ -4,7 +4,9 @@ import { SYSTEM_PROMPT } from "./prompt.js";
 import { reviewJsonSchema, ReviewZ } from "./schema.js";
 
 const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
-const model = process.env.GEMINI_MODEL;
+const MODELS = [process.env.GEMINI_MODEL, process.env.GEMINI_FALLBACK_MODEL].filter(Boolean);
+const RETRYABLE = [429, 500, 503, 504];
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 function buildUserContent({ docType, docText, jobText }) {
     let out = `<document type="${docType}">\n${docText}\n</document>`;
@@ -14,7 +16,33 @@ function buildUserContent({ docType, docText, jobText }) {
     return out;
 }
 
-export async function generateReview(input) {
+function statusOf(err) {
+    if (err?.status) return err.status;
+    const m = /"code":(\d+)/.exec(err?.message || "");
+    return m ? Number(m[1]) : undefined;
+}
+
+export { ai };
+
+export async function withFallback(run) {
+    let lastErr;
+    for (const model of MODELS) {
+        for (let attempt = 0; attempt < 3; attempt++) {
+            try {
+                const result = await run(model);
+                console.log(`[llm] answered by ${model}, attempt ${attempt + 1}`);
+                return result;
+            } catch (err) {
+                lastErr = err;
+                if (!RETRYABLE.includes(statusOf(err))) throw err;
+                await sleep(1000 * 2 ** attempt);
+            }
+        }
+    }
+    throw lastErr;
+}
+
+async function callReview(model, input) {
     const response = await ai.models.generateContent({
         model,
         contents: buildUserContent(input),
@@ -25,6 +53,9 @@ export async function generateReview(input) {
             temperature: 0.3,
         },
     });
-    const raw = JSON.parse(response.text);
-    return ReviewZ.parse(raw); // throws if the shape is wrong
+    return ReviewZ.parse(JSON.parse(response.text));
+}
+
+export function generateReview(input) {
+    return withFallback((model) => callReview(model, input));
 }
