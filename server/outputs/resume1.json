@@ -1,21 +1,21 @@
 {
-  "summary": "Your resume shows a solid foundation in computer science with practical experience in modern web technologies like React and Node.js. To make your application more competitive, you need to expand on your internship contributions and project details with specific metrics and technical scope.",
+  "summary": "Your resume shows a solid foundation in computer science with practical internship experience and a relevant web development project. To make your application more competitive, you need to replace vague descriptions with specific technical details and metrics.",
   "strengths": [
-    "Clear academic progression with a strong CGPA in Computer Science.",
-    "Practical application of core web development skills (React, Node.js, SQL) in both professional and academic settings."
+    "Clear academic progression with a solid CGPA in Computer Science.",
+    "Practical experience with modern web technologies like React and Node.js."
   ],
   "gaps": [
     {
-      "topic": "Website development details",
-      "why": "The bullet point about the company website does not mention your specific contributions, the technologies you used, or the scale of the website."
+      "topic": "Vague internship contributions",
+      "why": "The bullet point 'Worked on the company website' does not specify which technologies you used, what features you built, or the scope of your contributions."
     },
     {
-      "topic": "Bug fixing scope",
-      "why": "Saying you helped with bug fixes is too vague. You should specify the types of bugs you resolved, the tools you used to debug, and how many issues you addressed."
+      "topic": "Lack of detail on bug fixing",
+      "why": "The phrase 'Helped the team with bug fixes' lacks context regarding the types of bugs, the tools used to resolve them, or the scale of the codebase."
     },
     {
       "topic": "Low-substance bullet points",
-      "why": "The bullet 'Attended weekly meetings' describes a routine activity rather than an achievement. You should replace this with a bullet describing a technical task or collaboration outcome."
+      "why": "The bullet point 'Attended weekly meetings' describes a passive activity rather than an achievement. It should be replaced with a bullet describing a task you actively completed or collaborated on."
     }
   ],
   "missingKeywords": [],
@@ -23,17 +23,17 @@
     {
       "original": "Worked on the company website",
       "conservative": "Contributed to the company website",
-      "stronger": "Contributed to the company website by [add the specific tasks you performed] using [add the tools you used]. [add the result and its metric, if you have one]"
+      "stronger": "Contributed to the company website by [add the specific tasks or features you worked on] using [add the tools you used]. [add the result and its metric, if you have one]"
     },
     {
       "original": "Helped the team with bug fixes",
       "conservative": "Assisted the team with bug fixes",
-      "stronger": "Assisted the team in fixing [N] bugs in [project or area] using [add the tools you used]. [add the result and its metric, if you have one]"
+      "stronger": "Assisted the team in resolving [N] bugs within [specific system or codebase] using [add the tools you used]. [add the result and its metric, if you have one]"
     },
     {
       "original": "Made a web app for the university library using React and Node",
-      "conservative": "Built a web application for the university library using React and Node",
-      "stronger": "Built a web application for the university library using React and Node to [add the purpose or features of the app]. [add the result and its metric, if you have one]"
+      "conservative": "Created a web application for the university library using React and Node",
+      "stronger": "Created a web application for the university library using React and Node to enable [add the specific functionality or user action]. [add the result and its metric, if you have one]"
     }
   ]
 }

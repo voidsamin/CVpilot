@@ -1,0 +1,39 @@
+{
+  "summary": "Your cover letter introduces your Civil Engineering background and AutoCAD experience, but it is very brief. To stand out, you need to expand on your project details and highlight specific engineering skills.",
+  "strengths": [
+    "Clearly states your degree in Civil Engineering from Demo Institute.",
+    "Mentions practical experience using AutoCAD on a bridge design project."
+  ],
+  "gaps": [
+    {
+      "topic": "Bridge Design Project Details",
+      "why": "The bridge design project is your main selling point, but you do not mention the type of bridge, the design constraints, or the specific engineering principles you applied."
+    },
+    {
+      "topic": "Technical and Soft Skills",
+      "why": "You mention wanting to use your 'skills' and being a 'team player' without specifying what those technical skills are or providing an example of your teamwork in action."
+    },
+    {
+      "topic": "Project Outcomes and Metrics",
+      "why": "The letter lacks any mention of the outcome of your project, such as whether it was presented to faculty, received a high grade, or met specific design criteria."
+    }
+  ],
+  "missingKeywords": [],
+  "rewrites": [
+    {
+      "original": "I am looking for an entry-level position where I can use my skills.",
+      "conservative": "I am seeking an entry-level position where I can apply my skills.",
+      "stronger": "I am seeking an entry-level [insert target job title] position where I can apply my skills in [add 1-2 specific skills or areas of interest]. [add the result and its metric, if you have one]"
+    },
+    {
+      "original": "During my final year I worked on a bridge design project with three classmates, and I used AutoCAD to prepare the drawings.",
+      "conservative": "During my final year, I contributed to a bridge design project with three classmates, utilizing AutoCAD to prepare the drawings.",
+      "stronger": "During my final year, I contributed to a [type of bridge] design project with three classmates, utilizing AutoCAD to prepare [N] engineering drawings. [add the result and its metric, if you have one]"
+    },
+    {
+      "original": "I am responsible, punctual and a team player.",
+      "conservative": "I am responsible, punctual, and collaborative.",
+      "stronger": "I demonstrate responsibility and teamwork, which I showed during my final-year project by [add how you collaborated or managed your time]. [add the result and its metric, if you have one]"
+    }
+  ]
+}

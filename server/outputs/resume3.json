@@ -1,39 +1,39 @@
 {
-  "summary": "This resume outlines a solid foundation in electrical engineering with hands-on lab assistant experience and a practical hardware project. To make it more compelling, the bullet points need to quantify your impact and detail the specific tools and equipment you used.",
+  "summary": "Your resume effectively highlights your foundational electrical engineering education and hands-on experience as a lab assistant and project builder. To make your applications more competitive, you should expand on your bullet points by adding specific technical details, quantities, and outcomes.",
   "strengths": [
-    "Includes direct, hands-on experience as a Lab Assistant in an electronics lab.",
-    "Showcases practical application of engineering skills through an Arduino-based hardware project."
+    "Inclusion of hands-on lab experience and a completed hardware project.",
+    "Clear listing of relevant engineering skills like Arduino, MATLAB, and soldering."
   ],
   "gaps": [
     {
-      "topic": "Details on laboratory equipment",
-      "why": "The resume mentions being responsible for lab equipment but does not specify the types of tools or instruments managed, such as oscilloscopes or signal generators."
+      "topic": "Lab equipment details",
+      "why": "The resume mentions responsibility for lab equipment but does not specify the items. Adding the names of the equipment would clarify your technical exposure."
     },
     {
-      "topic": "Scope of student support",
-      "why": "The description of helping students lacks details on the number of students assisted or the specific engineering concepts covered during the sessions."
+      "topic": "Student assistance scope",
+      "why": "The description of helping students does not specify the subjects or the number of students. Adding these details would clarify the scale of your support."
     },
     {
-      "topic": "Technical specifications of the project",
-      "why": "The plant watering system project does not describe the specific components, programming logic, or testing methods used to verify its functionality."
+      "topic": "Project details and metrics",
+      "why": "The plant watering system project does not mention the scale or any outcomes. Adding details about the number of plants or system performance would make the project more impactful."
     }
   ],
   "missingKeywords": [],
   "rewrites": [
     {
       "original": "Responsible for lab equipment",
-      "conservative": "Maintained responsibility for laboratory equipment",
-      "stronger": "Maintained responsibility for [N] pieces of laboratory equipment, including [list the specific equipment you managed]. [add the result and its metric, if you have one]"
+      "conservative": "Held responsibility for laboratory equipment",
+      "stronger": "Held responsibility for [number] pieces of laboratory equipment, including [add the types of equipment]. [add the result and its metric, if you have one]"
     },
     {
       "original": "Helped students during practical sessions",
       "conservative": "Assisted students during practical sessions",
-      "stronger": "Assisted [N] students during practical sessions on [specify the topics or lab exercises]. [add the result and its metric, if you have one]"
+      "stronger": "Assisted [number] students during practical sessions for [add the course or topic]. [add the result and its metric, if you have one]"
     },
     {
       "original": "Built a system with Arduino and a moisture sensor that waters plants",
       "conservative": "Constructed a system with Arduino and a moisture sensor that waters plants",
-      "stronger": "Constructed a system with Arduino and a moisture sensor to water plants based on [specify the criteria or threshold]. [add the result and its metric, if you have one]"
+      "stronger": "Constructed a system with Arduino and a moisture sensor to water [number] plants. [add the result and its metric, if you have one]"
     }
   ]
 }
