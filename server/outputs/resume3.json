@@ -1,39 +1,39 @@
 {
-  "summary": "Your resume highlights solid foundational hands-on skills through your lab assistant role and Arduino project. To make it stronger, you should add specific technical details, quantify your impact, and expand on your academic coursework.",
+  "summary": "This resume outlines a solid foundation in electrical engineering with hands-on lab assistant experience and a practical hardware project. To make it more compelling, the bullet points need to quantify your impact and detail the specific tools and equipment you used.",
   "strengths": [
-    "Includes direct, hands-on experience with hardware prototyping tools like Arduino.",
-    "Demonstrates leadership and communication skills through the Lab Assistant role."
+    "Includes direct, hands-on experience as a Lab Assistant in an electronics lab.",
+    "Showcases practical application of engineering skills through an Arduino-based hardware project."
   ],
   "gaps": [
     {
-      "topic": "Quantifying Lab Assistant Scope",
-      "why": "The resume mentions being responsible for lab equipment and helping students, but does not specify the number of students assisted or the types of equipment managed."
+      "topic": "Details on laboratory equipment",
+      "why": "The resume mentions being responsible for lab equipment but does not specify the types of tools or instruments managed, such as oscilloscopes or signal generators."
     },
     {
-      "topic": "Technical Details in Projects",
-      "why": "The plant watering system project description is very brief and lacks details on the specific programming languages, components, or testing outcomes."
+      "topic": "Scope of student support",
+      "why": "The description of helping students lacks details on the number of students assisted or the specific engineering concepts covered during the sessions."
     },
     {
-      "topic": "Academic Coursework and Projects",
-      "why": "As an Electrical Engineering student, listing only one project and no relevant coursework makes it difficult to assess your academic breadth and technical depth."
+      "topic": "Technical specifications of the project",
+      "why": "The plant watering system project does not describe the specific components, programming logic, or testing methods used to verify its functionality."
     }
   ],
   "missingKeywords": [],
   "rewrites": [
     {
       "original": "Responsible for lab equipment",
-      "conservative": "Maintained lab equipment",
-      "stronger": "Managed [number] pieces of lab equipment [add specific types of equipment] [add the result and its metric, if you have one]"
+      "conservative": "Maintained responsibility for laboratory equipment",
+      "stronger": "Maintained responsibility for [N] pieces of laboratory equipment, including [list the specific equipment you managed]. [add the result and its metric, if you have one]"
     },
     {
       "original": "Helped students during practical sessions",
       "conservative": "Assisted students during practical sessions",
-      "stronger": "Assisted [number] students during practical sessions [add the specific tasks or concepts you helped with] [add the result and its metric, if you have one]"
+      "stronger": "Assisted [N] students during practical sessions on [specify the topics or lab exercises]. [add the result and its metric, if you have one]"
     },
     {
       "original": "Built a system with Arduino and a moisture sensor that waters plants",
-      "conservative": "Constructed a system using Arduino and a moisture sensor to water plants",
-      "stronger": "Constructed a plant watering system using Arduino and a moisture sensor [add any other tools or components used] [add the result and its metric, if you have one]"
+      "conservative": "Constructed a system with Arduino and a moisture sensor that waters plants",
+      "stronger": "Constructed a system with Arduino and a moisture sensor to water plants based on [specify the criteria or threshold]. [add the result and its metric, if you have one]"
     }
   ]
 }

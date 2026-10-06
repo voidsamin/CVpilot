@@ -1,21 +1,21 @@
 {
-  "summary": "Your resume shows a solid foundation in computer science with practical internship experience and a relevant web development project. To make your application more competitive, you should replace passive descriptions with active verbs and add specific details about your technical contributions.",
+  "summary": "Your resume shows a solid foundation in computer science with practical experience in modern web technologies like React and Node.js. To make your application more competitive, you need to expand on your internship contributions and project details with specific metrics and technical scope.",
   "strengths": [
-    "Direct industry experience gained through a technology internship during your undergraduate studies.",
-    "A clear, focused skills section that aligns well with your web development project and internship work."
+    "Clear academic progression with a strong CGPA in Computer Science.",
+    "Practical application of core web development skills (React, Node.js, SQL) in both professional and academic settings."
   ],
   "gaps": [
     {
-      "topic": "Quantifying Internship Contributions",
-      "why": "Your internship bullet points describe tasks like fixing bugs and working on the website without mentioning the scale, number of bugs resolved, or the impact of your work."
+      "topic": "Website development details",
+      "why": "The bullet point about the company website does not mention your specific contributions, the technologies you used, or the scale of the website."
     },
     {
-      "topic": "Project Scope and Features",
-      "why": "The Student Library App project description is very brief and does not explain what specific features you built or how the application functioned."
+      "topic": "Bug fixing scope",
+      "why": "Saying you helped with bug fixes is too vague. You should specify the types of bugs you resolved, the tools you used to debug, and how many issues you addressed."
     },
     {
-      "topic": "Active Collaboration Details",
-      "why": "Listing 'Attended weekly meetings' describes passive attendance rather than active participation, contribution, or collaboration with your team."
+      "topic": "Low-substance bullet points",
+      "why": "The bullet 'Attended weekly meetings' describes a routine activity rather than an achievement. You should replace this with a bullet describing a technical task or collaboration outcome."
     }
   ],
   "missingKeywords": [],
@@ -23,17 +23,17 @@
     {
       "original": "Worked on the company website",
       "conservative": "Contributed to the company website",
-      "stronger": "Contributed to the company website by [add the specific features or pages you worked on], [add the result and its metric, if you have one]"
+      "stronger": "Contributed to the company website by [add the specific tasks you performed] using [add the tools you used]. [add the result and its metric, if you have one]"
     },
     {
       "original": "Helped the team with bug fixes",
       "conservative": "Assisted the team with bug fixes",
-      "stronger": "Assisted the team with resolving [N] bugs in [add the specific system or codebase], [add the result and its metric, if you have one]"
+      "stronger": "Assisted the team in fixing [N] bugs in [project or area] using [add the tools you used]. [add the result and its metric, if you have one]"
     },
     {
       "original": "Made a web app for the university library using React and Node",
-      "conservative": "Developed a web application for the university library using React and Node",
-      "stronger": "Developed a web application for the university library using React and Node to [add the purpose or key features of the app], [add the user metric or result, if you have one]"
+      "conservative": "Built a web application for the university library using React and Node",
+      "stronger": "Built a web application for the university library using React and Node to [add the purpose or features of the app]. [add the result and its metric, if you have one]"
     }
   ]
 }

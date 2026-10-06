@@ -1,39 +1,39 @@
 {
-  "summary": "Your resume shows great initial marketing experience through your volunteer work and class projects. To make it more impactful, you should focus on quantifying your achievements and clearly connecting your technical skills to your experiences.",
+  "summary": "Your resume highlights practical marketing experience through your volunteer work and academic projects. To make your applications more competitive, you should focus on quantifying your achievements and detailing the specific tools you used.",
   "strengths": [
-    "Direct marketing experience through social media management for a campus organization.",
-    "Practical academic project work involving primary research and teamwork."
+    "Includes relevant marketing experience through managing a student club's social media presence.",
+    "Demonstrates hands-on academic experience with a practical marketing project focused on consumer behavior."
   ],
   "gaps": [
     {
-      "topic": "Quantifying Social Media Impact",
-      "why": "The social media experience lists tasks like managing the page and making posts but lacks metrics. Adding the number of posts, follower growth, or engagement rates would make this section much stronger."
+      "topic": "Quantifying social media impact",
+      "why": "The resume mentions managing a Facebook page but does not show the scale of the page or the engagement generated. Adding metrics like follower growth or post reach would demonstrate your marketing impact."
     },
     {
-      "topic": "Survey Methodology and Scope",
-      "why": "The marketing class project mentions conducting a survey but does not specify the scale. Including the number of respondents or the tools used to analyze the data would demonstrate your research capabilities."
+      "topic": "Survey methodology and scope",
+      "why": "The marketing class project mentions a survey but lacks details on how many students were surveyed or what tools were used to analyze the data."
     },
     {
-      "topic": "Contextualizing Skills",
-      "why": "Skills like Microsoft Excel and Canva are listed in the skills section but are not mentioned in your experience or project descriptions. Connecting these tools to your actual tasks shows how you apply them in practice."
+      "topic": "Specific tools used for content creation",
+      "why": "You list Canva in your skills, but do not specify if or how you used it to create the event posts for the Green Campus Club."
     }
   ],
   "missingKeywords": [],
   "rewrites": [
     {
-      "original": "Managed the club's Facebook page",
-      "conservative": "Administered the club's Facebook page",
-      "stronger": "Administered the club's Facebook page [add frequency, e.g., daily], [add the result or metric, such as follower growth or engagement rate, if you have one]"
-    },
-    {
       "original": "Made posts for events",
       "conservative": "Created posts for events",
-      "stronger": "Created [N] posts for events [add the tools you used, e.g., Canva], [add the result, such as event attendance or reach, if you have one]"
+      "stronger": "Created [N] posts for [N] events using [add the tools you used]. [add the result and its metric, if you have one]"
+    },
+    {
+      "original": "Talked to members about activities",
+      "conservative": "Communicated with members about activities",
+      "stronger": "Communicated with [N] members regarding [type of activities]. [add the result and its metric, if you have one]"
     },
     {
       "original": "Did a survey about student spending habits with a group",
       "conservative": "Conducted a survey on student spending habits with a group",
-      "stronger": "Conducted a survey on student spending habits with a group of [N] peers, surveying [N] students [add the tools you used to analyze data, if any] [add the outcome or presentation of the results]"
+      "stronger": "Collaborated with a group of [N] to conduct a survey on student spending habits among [N] students. [add the result and its metric, if you have one]"
     }
   ]
 }
