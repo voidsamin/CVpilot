@@ -1,0 +1,6 @@
+Backend Software Engineering Intern
+
+We are hiring an intern to work on our backend services. You will build
+and test REST APIs in Node.js, design PostgreSQL schemas, write unit tests,
+and deploy services with Docker on AWS. Experience with TypeScript and
+CI pipelines is a plus.

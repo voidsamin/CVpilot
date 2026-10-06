@@ -1,0 +1,6 @@
+Junior Web Developer
+
+Join our product team to build and maintain web applications. You will
+write clean JavaScript and React code, work with REST APIs, use Git for
+version control, and take part in code reviews. Familiarity with
+TypeScript and automated testing is a plus.

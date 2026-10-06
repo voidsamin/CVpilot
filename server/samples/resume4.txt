@@ -1,0 +1,20 @@
+Farhan Karim
+farhan.karim@example.com | Dhaka, Bangladesh
+
+EDUCATION
+BSc in Computer Science, Demo University, 2022 - 2026 (expected)
+CGPA: 3.8/4.0
+
+EXPERIENCE
+Software Engineering Intern, Sample Systems Ltd, Jun 2025 - Sep 2025
+- Built a REST API in Node.js and Express that handled 2,000 requests per day
+- Reduced report generation time from 40 seconds to 8 seconds by adding database indexes in PostgreSQL
+- Wrote 35 unit tests with Jest, raising test coverage from 52% to 81%
+
+PROJECTS
+Campus Event Finder
+- Developed a React web app used by 400 students to find and register for events
+- Deployed on a free cloud host with a CI pipeline in GitHub Actions
+
+SKILLS
+JavaScript, TypeScript, React, Node.js, Express, PostgreSQL, Jest, Git, GitHub Actions

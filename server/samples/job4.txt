@@ -1,0 +1,6 @@
+Data Analyst Trainee
+
+We need a trainee to help our analytics group. You will write SQL queries,
+clean datasets with R or Python, build dashboards in Power BI, and prepare
+weekly reports. Knowledge of statistics and strong Excel skills are required.
+Experience with regression analysis is a plus.
