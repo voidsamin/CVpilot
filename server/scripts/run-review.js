@@ -79,6 +79,8 @@ for (let i = 0; i < cases.length; i++) {
         console.log(`${c.name}: ${row.result} | ${row.secs}s | ${err?.name} status=${err?.status ?? "n/a"}`);
         if (err?.name === "ZodError")
             console.log("   " + err.issues.map((x) => x.path.join(".") + ":" + x.code).join("; "));
+        if (err?.raw)
+            await writeFile(new URL(`../outputs/${c.name}.raw.txt`, import.meta.url), err.raw);
     }
 
     rows.push(row);
@@ -99,7 +101,7 @@ const fast = rows.filter((r) => r.result === "schema OK" && r.secs < LIMIT_S).le
 const verdict = (ok) => (ok ? "PASS" : "FAIL");
 console.log(`Schema valid:      ${schemaOk} of ${n}  ${verdict(schemaOk === n)}` +
     (schemaFail ? `  (${schemaFail} schema failures)` : ""));
-console.log(`Rule checks clean: ${clean} of ${n}  ${verdict(clean === n)}`);
+console.log(`Rule checks clean: ${clean} of ${schemaOk}  ${verdict(clean === schemaOk)}  (reviews that returned)`);
 console.log(`Under ${LIMIT_S}s:         ${fast} of ${n}  ${verdict(fast >= Math.ceil(n * 0.9))} (needs 9 of 10)`);
 if (apiFails)
     console.log(`\n${apiFails} case(s) hit API errors, not schema errors. Wait a few minutes and rerun them by name, e.g. node scripts/run-review.js cover2`);

@@ -28,9 +28,11 @@ export const reviewJsonSchema = {
     type: "object",
     properties: {
         summary: { type: "string" },
-        strengths: { type: "array", items: { type: "string" } },
+        strengths: { type: "array", minItems: 1, items: { type: "string", minLength: 1 } },
         gaps: {
             type: "array",
+            minItems: 3,
+            maxItems: 3,
             items: {
                 type: "object",
                 properties: {
@@ -44,12 +46,14 @@ export const reviewJsonSchema = {
         missingKeywords: { type: "array", items: { type: "string" } },
         rewrites: {
             type: "array",
+            minItems: 3,
+            maxItems: 3,
             items: {
                 type: "object",
                 properties: {
-                    original: { type: "string" },
-                    conservative: { type: "string" },
-                    stronger: { type: "string" },
+                    original: { type: "string", minLength: 1 },
+                    conservative: { type: "string", minLength: 1 },
+                    stronger: { type: "string", minLength: 1 },
                 },
                 required: ["original", "conservative", "stronger"],
             },

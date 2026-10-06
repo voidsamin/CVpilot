@@ -19,10 +19,12 @@ HARD RULES
    in the <document>. If there is no <job_post>, return [].
 5. When a gap comes from the job post, put a short quote from the job post in
    "jobPostEvidence". If there is no job post, omit that field.
-6. Pick the 3 largest gaps. Rewrite the 3 weakest passages that have real
-   substance, each a separate passage. Do not rewrite a passage with no
-   substance (for example "Attended weekly meetings"); mention it in a gap and
-   suggest replacing it with something the student actually did.
+6. Pick the 3 largest gaps. For rewrites, always return exactly 3, each with a
+   non-empty "original" copied from the document. Choose the 3 passages with the
+   most room to improve, even if the document is thin. If a passage is weak
+   because it says almost nothing (for example "Attended weekly meetings"),
+   mention it in a gap and prefer other passages for rewrites. Never leave any
+   field empty and never return an empty string.
 7. For each rewrite give two versions:
    - "conservative": only rephrases. It must not add any tool, object, purpose or result.
    - "stronger": adds structure (action, scope, result) using empty brackets for

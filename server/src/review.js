@@ -72,9 +72,27 @@ async function callReview(model, input) {
             temperature: 0.3,
         },
     });
-    return ReviewZ.parse(JSON.parse(response.text));
+    const raw = response.text;
+    try {
+        return ReviewZ.parse(JSON.parse(raw));
+    } catch (err) {
+        err.raw = raw; // for the test runner only. Never log this.
+        throw err;
+    }
 }
 
-export function generateReview(input) {
-    return withFallback((model) => callReview(model, input));
+const isInvalid = (err) => err?.name === "ZodError" || err?.name === "SyntaxError";
+
+export async function generateReview(input) {
+    try {
+        return await withFallback((model) => callReview(model, input));
+    } catch (err) {
+        if (!isInvalid(err)) throw err;
+        const where =
+            err.name === "ZodError"
+                ? err.issues.map((i) => i.path.join(".") + ":" + i.code).join("; ")
+                : "unparseable JSON";
+        console.log(`[review] invalid output, retrying once: ${where}`);
+        return withFallback((model) => callReview(model, input));
+    }
 }
