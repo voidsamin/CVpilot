@@ -62,3 +62,35 @@ export function novelWords(review) {
     }
     return out;
 }
+
+const flat = (s) => s.replace(/\s+/g, " ").toLowerCase();
+const PURPOSE =
+    /\b(engag\w*|recruit\w*|ensur\w*|streamlin\w*|facilitat\w*|improv\w*|enhanc\w*|boost\w*|driv\w*|automat\w*|identif\w*|coordinat\w*|align\w*)\b/gi;
+const LAYOUT = /\b(layout|formatting|formatted|visually|sections|structure)\b/i;
+
+export function contentChecks({ docText, jobText }, review) {
+    const out = [];
+    const doc = flat(docText);
+
+    review.rewrites.forEach((r, i) => {
+        for (const [label, text] of [["conservative", r.conservative], ["stronger", r.stronger]]) {
+            for (const m of text.matchAll(/\[([^\]]*)\]/g))
+                if (/e\.g\.|such as|for example|\//i.test(m[1]))
+                    out.push(`rewrite ${i} ${label}: example inside bracket ${m[0]}`);
+            const added = [...text.replace(/\[[^\]]*\]/g, "").matchAll(PURPOSE)]
+                .map((x) => x[0].toLowerCase())
+                .filter((w) => !doc.includes(w));
+            if (added.length) out.push(`rewrite ${i} ${label}: added purpose words: ${added.join(", ")}`);
+        }
+    });
+
+    for (const s of [review.summary, ...review.strengths])
+        if (LAYOUT.test(s)) out.push(`layout comment: "${s.slice(0, 50)}..."`);
+
+    if (jobText)
+        for (const g of review.gaps)
+            if (g.jobPostEvidence && !flat(jobText).includes(flat(g.jobPostEvidence)))
+                out.push(`jobPostEvidence is not a quote from the job post: "${g.jobPostEvidence.slice(0, 50)}..."`);
+
+    return out;
+}

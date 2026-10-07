@@ -8,7 +8,7 @@ const MODELS = [process.env.GEMINI_MODEL, process.env.GEMINI_FALLBACK_MODEL].fil
 if (MODELS.length === 0) throw new Error("Set GEMINI_MODEL in server/.env");
 
 const RETRYABLE = [429, 500, 503, 504];
-const TIMEOUT_MS = 15000;
+const TIMEOUT_MS = 30000;
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 // Rejects with a 504 if one attempt takes longer than TIMEOUT_MS.
@@ -43,7 +43,7 @@ export { ai };
 export async function withFallback(run) {
     let lastErr;
     for (const model of MODELS) {
-        for (let attempt = 0; attempt < 3; attempt++) {
+        for (let attempt = 0; attempt < 2; attempt++) {
             try {
                 const result = await withTimeout(run(model));
                 console.log(`[llm] answered by ${model}, attempt ${attempt + 1}`);
@@ -54,7 +54,7 @@ export async function withFallback(run) {
                 console.log(`[llm] ${model} attempt ${attempt + 1} failed: status=${s ?? "n/a"}`);
                 if (!RETRYABLE.includes(s)) throw err;
                 if (s === 429) break; // quota: retrying the same model won't help, try the next one
-                await sleep(1000 * 2 ** attempt);
+                await sleep(500 * 2 ** attempt);
             }
         }
     }
@@ -70,6 +70,7 @@ async function callReview(model, input) {
             responseMimeType: "application/json",
             responseJsonSchema: reviewJsonSchema,
             temperature: 0.3,
+            thinkingConfig: { thinkingLevel: "low" },
         },
     });
     const raw = response.text;
@@ -83,16 +84,26 @@ async function callReview(model, input) {
 
 const isInvalid = (err) => err?.name === "ZodError" || err?.name === "SyntaxError";
 
+// export async function generateReview(input) {
+//     try {
+//         return await withFallback((model) => callReview(model, input));
+//     } catch (err) {
+//         if (!isInvalid(err)) throw err;
+//         const where =
+//             err.name === "ZodError"
+//                 ? err.issues.map((i) => i.path.join(".") + ":" + i.code).join("; ")
+//                 : "unparseable JSON";
+//         console.log(`[review] invalid output, retrying once: ${where}`);
+//         return withFallback((model) => callReview(model, input));
+//     }
+// }
+
 export async function generateReview(input) {
     try {
         return await withFallback((model) => callReview(model, input));
     } catch (err) {
         if (!isInvalid(err)) throw err;
-        const where =
-            err.name === "ZodError"
-                ? err.issues.map((i) => i.path.join(".") + ":" + i.code).join("; ")
-                : "unparseable JSON";
-        console.log(`[review] invalid output, retrying once: ${where}`);
-        return withFallback((model) => callReview(model, input));
+        console.log("[review] invalid output, retrying once");
+        return await callReview(MODELS[0], input); // one direct call, no retry loop
     }
 }

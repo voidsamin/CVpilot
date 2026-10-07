@@ -1,6 +1,6 @@
 import { readFile, mkdir, writeFile } from "node:fs/promises";
 import { generateReview } from "../src/review.js";
-import { runChecks, novelWords } from "../src/checks.js";
+import { runChecks, novelWords, contentChecks } from "../src/checks.js";
 
 // Usage:
 //   node scripts/run-review.js                  all 10 cases
@@ -53,13 +53,21 @@ for (let i = 0; i < cases.length; i++) {
     const c = cases[i];
     const docText = await read(c.doc);
     const jobText = c.job ? await read(c.job) : undefined;
+
+    // Guard: an empty sample file would waste an API call and give a confusing result
+    if (!docText.trim()) {
+        console.log(`${c.name}: SKIPPED, ${c.doc} is empty`);
+        rows.push({ case: c.name, result: "EMPTY FILE", secs: 0, issues: 0 });
+        continue;
+    }
+
     const start = Date.now();
     const row = { case: c.name, result: "", secs: 0, issues: 0 };
 
     try {
         const review = await generateReview({ docType: c.docType, docText, jobText });
         row.secs = Number(((Date.now() - start) / 1000).toFixed(1));
-        const problems = runChecks({ docText, jobText }, review);
+        const problems = [...runChecks({ docText, jobText }, review), ...contentChecks({ docText, jobText }, review)];
         if (c.name === "cover3") problems.push(...injectionProblems(review));
         row.result = "schema OK";
         row.issues = problems.length;

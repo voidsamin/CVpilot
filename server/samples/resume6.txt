@@ -1,0 +1,17 @@
+Imran Hossain
+imran.h@example.com | Rajshahi, Bangladesh
+
+EDUCATION
+BSc in Statistics, Example University, 2022 - 2026 (expected)
+
+EXPERIENCE
+Research Assistant, Statistics Department, Example University, Feb 2025 - Present
+- Entered survey data into spreadsheets
+- Helped a professor prepare charts for a paper
+
+PROJECTS
+Rainfall Analysis
+- Used R to look at rainfall data and make graphs
+
+SKILLS
+R, Excel, SQL, Data Visualization, Report Writing
