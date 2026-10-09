@@ -61,6 +61,24 @@ export async function withFallback(run) {
     throw lastErr;
 }
 
+// Removes example text ("e.g., ...", "such as ...") from inside brackets.
+const stripExamples = (s) =>
+    s.replace(
+        /\[([^\]]*?)[,;]?\s*(?:e\.g\.|such as|for example)[^\]]*\]/gi,
+        (_, a) => `[${a.trim() || "add details"}]`
+    );
+
+function cleanReview(r) {
+    return {
+        ...r,
+        rewrites: r.rewrites.map((w) => ({
+            ...w,
+            conservative: stripExamples(w.conservative),
+            stronger: stripExamples(w.stronger),
+        })),
+    };
+}
+
 async function callReview(model, input) {
     const response = await ai.models.generateContent({
         model,
@@ -75,7 +93,7 @@ async function callReview(model, input) {
     });
     const raw = response.text;
     try {
-        return ReviewZ.parse(JSON.parse(raw));
+        return cleanReview(ReviewZ.parse(JSON.parse(raw)));
     } catch (err) {
         err.raw = raw; // for the test runner only. Never log this.
         throw err;

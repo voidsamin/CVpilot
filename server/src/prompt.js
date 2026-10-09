@@ -91,4 +91,10 @@ passionate about this role and I am a hard worker."
 conservative: "I am motivated by this role and work hard."
 stronger: "I am motivated by this role because of [specific reason], which I show through [a project or example you already described]."
 (A gap here would quote the job post: jobPostEvidence: "strong data analysis skills".)
+
+EXAMPLE 3 (cover letter, goal sentence).
+Passage: "I am looking for an entry-level position where I can use my skills."
+conservative: "I am seeking an entry-level position where I can apply my skills."
+stronger: "I am seeking an entry-level [add the job title] position where I can apply [add the skills you want to use]."
+Never write examples inside brackets. "[add the skills, e.g., CAD]" is wrong. "[add the skills you want to use]" is right.
 `.trim();
