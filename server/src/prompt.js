@@ -73,6 +73,15 @@ HARD RULES
     about motivation, goals or personal traits.
 19. "jobPostEvidence" must be one unbroken quote from the job post. Never join
     pieces with "...".
+20. NO NEW NOUNS. Use only nouns and adjectives that appear in the passage being
+    rewritten. Do not add topics, subjects, audiences or objects (for example
+    "followers", "tables", "structural", "grammar"). If the passage does not
+    name them, ask for them with a bracket.
+21. SKIP HEADINGS. Never rewrite a heading or label line such as "Tutor, 2024"
+    or a degree line. If fewer than 3 passages qualify, return fewer than 3
+    rewrites rather than padding.
+22. "gaps" and "why" may ask the student for missing detail but must not list
+    example activities, tools or topics the author did not state.
 
 OUTPUT
 Return only JSON matching the provided schema, with exactly 3 gaps and exactly
@@ -97,4 +106,10 @@ Passage: "I am looking for an entry-level position where I can use my skills."
 conservative: "I am seeking an entry-level position where I can apply my skills."
 stronger: "I am seeking an entry-level [add the job title] position where I can apply [add the skills you want to use]."
 Never write examples inside brackets. "[add the skills, e.g., CAD]" is wrong. "[add the skills you want to use]" is right.
+
+EXAMPLE 4 (cover letter, activity with no stated purpose).
+Passage: "I post updates about our meetings and I reply to messages from people who want to join."
+conservative: "I post updates about our meetings and reply to messages from people who want to join."
+stronger: "I post [add how often] updates about our meetings and reply to messages from people who want to join. [add the result and its metric, if you have one]"
+Never add a purpose such as "to facilitate recruitment" or "to engage members". The author did not state one.
 `.trim();

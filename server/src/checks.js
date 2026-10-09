@@ -94,3 +94,17 @@ export function contentChecks({ docText, jobText }, review) {
 
     return out;
 }
+
+export function unseenWords(docText, review) {
+    const words = (s) => s.toLowerCase().match(/[a-z]{4,}/g) || [];
+    const docSet = new Set(words(docText).map((w) => w.replace(/(ing|ed|es|s)$/, "")));
+    const out = [];
+    review.rewrites.forEach((r, i) => {
+        const text = r.stronger.replace(/\[[^\]]*\]/g, "");
+        const unseen = [...new Set(words(text))].filter(
+            (w) => !docSet.has(w.replace(/(ing|ed|es|s)$/, ""))
+        );
+        if (unseen.length) out.push(`rewrite ${i} stronger: words not in document: ${unseen.join(", ")}`);
+    });
+    return out;
+}
