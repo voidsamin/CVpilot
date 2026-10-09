@@ -68,9 +68,17 @@ const stripExamples = (s) =>
         (_, a) => `[${a.trim() || "add details"}]`
     );
 
+const LAYOUT_RE = /\b(layout|formatting|formatted|visually|structure|organized|organised|easy to read|easy to scan|concise|clean|clear and)\b/i;
+
+function dropLayoutStrengths(strengths) {
+    const kept = strengths.filter((s) => !LAYOUT_RE.test(s));
+    return kept.length ? kept : strengths.slice(0, 1); // schema needs at least 1
+}
+
 function cleanReview(r) {
     return {
         ...r,
+        strengths: dropLayoutStrengths(r.strengths),
         rewrites: r.rewrites.map((w) => ({
             ...w,
             conservative: stripExamples(w.conservative),

@@ -82,6 +82,10 @@ HARD RULES
     rewrites rather than padding.
 22. "gaps" and "why" may ask the student for missing detail but must not list
     example activities, tools or topics the author did not state.
+23. STRENGTHS ARE ABOUT CONTENT. Each strength must name something the author
+    actually did, studied or listed (a role, a tool, a degree, a project). Never
+    praise how the document looks, reads, is organized or how long it is. If
+    there is only one real strength, return only one.
 
 OUTPUT
 Return only JSON matching the provided schema, with exactly 3 gaps and exactly
